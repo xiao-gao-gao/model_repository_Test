@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/五山村长/ontologies/2022/10/untitled-ontology-6"
+         xmlns="http://www.semanticweb.org/五山村长/ontologies/2022/10/untitled-ontology-6#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/五山村长/ontologies/2022/10/untitled-ontology-6"/>
+
+<owl:ObjectProperty rdf:about="#input_unit">
+  <rdfs:domain rdf:resource="#model_input"/>
+  <rdfs:range rdf:resource="#model_unit"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#output_unit">
+  <rdfs:domain rdf:resource="#model_output"/>
+  <rdfs:range rdf:resource="#model_unit"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#param_unit">
+  <rdfs:domain rdf:resource="#model_param"/>
+  <rdfs:range rdf:resource="#model_unit"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#preorder_name">
+  <rdfs:domain rdf:resource="#model_preorder"/>
+  <rdfs:range rdf:resource="#model_name"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#preorder_description">
+  <rdfs:domain rdf:resource="#model_preorder"/>
+  <rdfs:range rdf:resource="#model_description"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#preorder_class">
+  <rdfs:domain rdf:resource="#model_preorder"/>
+  <rdfs:range rdf:resource="#model_class"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#preorder_hierarchy">
+  <rdfs:domain rdf:resource="#model_preorder"/>
+  <rdfs:range rdf:resource="#model_hierarchy"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#preorder_functionality">
+  <rdfs:domain rdf:resource="#model_preorder"/>
+  <rdfs:range rdf:resource="#model_functionality"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#backorder_name">
+  <rdfs:domain rdf:resource="#model_backorder"/>
+  <rdfs:range rdf:resource="#model_name"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#backorder_description">
+  <rdfs:domain rdf:resource="#model_backorder"/>
+  <rdfs:range rdf:resource="#model_description"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#backorder_class">
+  <rdfs:domain rdf:resource="#model_backorder"/>
+  <rdfs:range rdf:resource="#model_class"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#backorder_hierarchy">
+  <rdfs:domain rdf:resource="#model_backorder"/>
+  <rdfs:range rdf:resource="#model_hierarchy"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#backorder_functionality">
+  <rdfs:domain rdf:resource="#model_backorder"/>
+  <rdfs:range rdf:resource="#model_functionality"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#similar_name">
+  <rdfs:domain rdf:resource="#similar_model"/>
+  <rdfs:range rdf:resource="#model_name"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#similar_description">
+  <rdfs:domain rdf:resource="#similar_model"/>
+  <rdfs:range rdf:resource="#model_description"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#similar_class">
+  <rdfs:domain rdf:resource="#similar_model"/>
+  <rdfs:range rdf:resource="#model_class"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#similar_hierarchy">
+  <rdfs:domain rdf:resource="#similar_model"/>
+  <rdfs:range rdf:resource="#model_hierarchy"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#unit_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_unit"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#unit_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_unit"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#unit_description">
+  <rdfs:domain rdf:resource="#model_unit"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#code_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_implement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#code_language">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_implement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#code_contributor">
+  <rdfs:domain rdf:resource="#model_implement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#code_description">
+  <rdfs:domain rdf:resource="#model_implement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#code_timestamp">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_implement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#code_version">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_implement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#input_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_input"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#input_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_input"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#input_value">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_input"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#input_description">
+  <rdfs:domain rdf:resource="#model_input"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#input_timestamp">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_input"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#output_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_output"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#output_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_output"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#output_value">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_output"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#output_description">
+  <rdfs:domain rdf:resource="#model_output"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#output_timestamp">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_output"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#param_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_param"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#param_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_param"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#param_value">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_param"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#param_default_value">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_param"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#param_description">
+  <rdfs:domain rdf:resource="#model_param"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hashrate_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_hashrate"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hashrate_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_hashrate"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hashrate_description">
+  <rdfs:domain rdf:resource="#model_hashrate"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hashrate_api">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_hashrate"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hashrate_performance">
+  <rdfs:domain rdf:resource="#model_hashrate"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hashrate_result">
+  <rdfs:domain rdf:resource="#model_hashrate"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#class_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_class"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#class_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_class"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#class_description">
+  <rdfs:domain rdf:resource="#model_class"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#description_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_description"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#description_description">
+  <rdfs:domain rdf:resource="#model_description"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#functionality_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_functionality"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#functionality_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_functionality"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#functionality_description">
+  <rdfs:domain rdf:resource="#model_functionality"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hierarchy_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_hierarchy"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hierarchy_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_hierarchy"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hierarchy_description">
+  <rdfs:domain rdf:resource="#model_hierarchy"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#keywords">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_keyword"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#keyword_description">
+  <rdfs:domain rdf:resource="#model_keyword"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#mature_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_mature"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#mature_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_mature"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#mature_description">
+  <rdfs:domain rdf:resource="#model_mature"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#mature_model">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_mature"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#mature_performance">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_mature"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#name_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_name"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#name_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_name"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#name_description">
+  <rdfs:domain rdf:resource="#model_name"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#preorder_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_preorder"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#backorder_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_backorder"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#version_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_version"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#version_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_version"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#version_description">
+  <rdfs:domain rdf:resource="#model_version"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#version_timestamp">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_version"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#version_model">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_version"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#version_performance">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_version"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#similar_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#similar_model"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#demo_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_demo"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#demo_name">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#model_demo"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#demo_description">
+  <rdfs:domain rdf:resource="#model_demo"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#model_input">
+  <rdfs:subClassOf rdf:resource="#model_kernel"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_unit">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_output">
+  <rdfs:subClassOf rdf:resource="#model_kernel"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_param">
+  <rdfs:subClassOf rdf:resource="#model_kernel"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_preorder">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_name">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_description">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_class">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_hierarchy">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_functionality">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_backorder">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#similar_model">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_implement">
+  <rdfs:subClassOf rdf:resource="#model_kernel"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_hashrate">
+  <rdfs:subClassOf rdf:resource="#model_kernel"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_keyword">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_mature">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_version">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_demo">
+  <rdfs:subClassOf rdf:resource="#model_attribute"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_kernel">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#model_attribute">
+  <rdfs:subClassOf rdf:resource="#model_kernel"/>
+</owl:Class>
+
+<model_keyword rdf:about="#湿法冶锌">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <keyword_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湿法冶锌是流程工艺xxx</keyword_description>
+  <keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">湿法冶锌</keywords>
+</model_keyword>
+
+<model_description rdf:about="#1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#model_name"/>
+  <rdf:type rdf:resource="#model_class"/>
+  <rdf:type rdf:resource="#model_mature"/>
+  <rdf:type rdf:resource="#model_hierarchy"/>
+  <description_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">模型描述</description_description>
+  <name_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</name_id>
+  <name_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">模型名称</name_name>
+  <name_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">模型名称描述</name_description>
+  <class_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</class_id>
+  <class_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">类别名称</class_name>
+  <class_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">类别描述</class_description>
+  <mature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</mature_id>
+  <mature_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">成熟</mature_name>
+  <mature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">成熟度描述</mature_description>
+  <mature_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</mature_model>
+  <mature_performance rdf:datatype="http://www.w3.org/2001/XMLSchema#string">模型性能</mature_performance>
+  <hierarchy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</hierarchy_id>
+  <hierarchy_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">层级名</hierarchy_name>
+  <hierarchy_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">层级描述</hierarchy_description>
+  <description_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</description_id>
+</model_description>
+
+<model_version rdf:about="#版本名">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <version_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</version_id>
+  <version_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">版本名</version_name>
+  <version_timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-11-24 15:29:24</version_timestamp>
+  <version_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">版本描述</version_description>
+  <version_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</version_model>
+  <version_performance rdf:datatype="http://www.w3.org/2001/XMLSchema#string">模型性能</version_performance>
+</model_version>
+
+<model_functionality rdf:about="#功能名">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <functionality_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</functionality_id>
+  <functionality_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">功能名</functionality_name>
+  <functionality_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">功能描述</functionality_description>
+</model_functionality>
+
+<model_unit rdf:about="#kg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <unit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</unit_id>
+  <unit_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kg</unit_name>
+  <unit_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">重量单位</unit_description>
+</model_unit>
+
+<model_keyword rdf:about="#模型预测控制">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">模型预测控制</keywords>
+  <keyword_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">关键词描述</keyword_description>
+</model_keyword>
+
+<model_keyword rdf:about="#锌">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">锌</keywords>
+  <keyword_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">关键词描述</keyword_description>
+</model_keyword>
+
+
+</rdf:RDF>
